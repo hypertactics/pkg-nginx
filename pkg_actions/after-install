@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+
+cp $RPM_INSTALL_PREFIX/.scripts/nginx.init /etc/init.d/nginx
+/bin/chmod +x /etc/init.d/nginx
+
+/sbin/chkconfig --add nginx
+/sbin/chkconfig nginx on
+/etc/init.d/nginx start
+

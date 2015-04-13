@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+/etc/init.d/nginx stop
+[[ -d $RPM_INSTALL_PREFIX ]] && rm -rf $RPM_INSTALL_PREFIX
+
+/sbin/chkconfig --del nginx
+[[ -e /etc/init.d/nginx ]] && rm -f /etc/init.d/nginx
